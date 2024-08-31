@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo de Roblox Studio</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Roblox_Studio_logo_2021_present.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #3b5998;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            border-bottom: 2px solid #3b5998;
+            padding-bottom: 10px;
+            color: #333;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-left: 4px solid #3b5998;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .interactive {
+            background-color: #e7f7e6;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .interactive input, .interactive button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1em;
+            width: 100%;
+        }
+        .interactive p {
+            background-color: #66bb6a;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+        .note {
+            background-color: #ffeb3b;
+            padding: 10px;
+            border-left: 4px solid #fdd835;
+            margin-bottom: 20px;
+            border-radius: 3px;
+        }
+        .example {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-left: 4px solid #3b5998;
+            margin-bottom: 20px;
+            border-radius: 3px;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        /* Estilos adicionais para botões e links */
+        nav a, .interactive button {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover, .interactive button:hover {
+            background-color: #555;
+            color: white;
+        }
+        /* Estilos de acessibilidade */
+        a:focus {
+            outline: 2px solid #3b5998;
+            outline-offset: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guia Completo de Roblox Studio</h1>
+    </header>
+    <nav>
+        <a href="#introducao">Introdução</a>
+        <a href="#instalacao">Instalação e Configuração</a>
+        <a href="#interface">Interface do Usuário</a>
+        <a href="#primeiro-jogo">Criando seu Primeiro Jogo</a>
+        <a href="#componentes">Componentes e Propriedades</a>
+        <a href="#scripts">Scripts e Programação</a>
+        <a href="#movimentacao">Movimentação de Personagens</a>
+        <a href="#guis">Criação de GUIs</a>
+        <a href="#efeitos">Sons e Efeitos Visuais</a>
+        <a href="#publicacao">Publicação e Compartilhamento</a>
+        <a href="#dicas">Dicas Avançadas</a>
+        <a href="#exercicios">Exercícios</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    <main>
+        <section id="introducao">
+            <h2>Introdução ao Roblox Studio</h2>
+            <p>Roblox Studio é a plataforma de desenvolvimento usada para criar jogos no Roblox. Neste guia, vamos explorar desde o básico até recursos avançados, para que você possa criar seus próprios jogos.</p>
+        </section>
+
+        <section id="instalacao">
+            <h2>Instalação e Configuração</h2>
+            <p>Primeiro, você precisa baixar e instalar o Roblox Studio. A instalação é simples e rápida, e logo você estará pronto para começar a criar.</p>
+            <ol>
+                <li>Acesse o site oficial do Roblox e faça login na sua conta.</li>
+                <li>Baixe o Roblox Studio e siga as instruções de instalação.</li>
+                <li>Abra o Roblox Studio e configure suas preferências iniciais.</li>
+            </ol>
+        </section>
+
+        <section id="interface">
+            <h2>Interface do Usuário</h2>
+            <p>A interface do Roblox Studio é dividida em várias partes. Entender cada uma delas é essencial para trabalhar de forma eficiente.</p>
+            <ul>
+                <li><strong>Explorador:</strong> Mostra a hierarquia de objetos no seu jogo.</li>
+                <li><strong>Propriedades:</strong> Exibe as propriedades dos objetos selecionados.</li>
+                <li><strong>Janela de visualização:</strong> Onde você vê e interage com seu jogo.</li>
+                <li><strong>Barra de ferramentas:</strong> Contém ferramentas essenciais para construção e script.</li>
+            </ul>
+        </section>
+
+        <section id="primeiro-jogo">
+            <h2>Criando seu Primeiro Jogo</h2>
+            <p>Vamos começar criando um jogo simples para entender o básico do Roblox Studio. Siga os passos abaixo:</p>
+            <ol>
+                <li>Abra o Roblox Studio e selecione um template.</li>
+                <li>Adicione objetos ao seu jogo usando a barra de ferramentas.</li>
+                <li>Teste seu jogo clicando em "Play".</li>
+                <li>Salve e publique seu jogo para que outros possam jogá-lo.</li>
+            </ol>
+        </section>
+
+        <section id="componentes">
+            <h2>Componentes e Propriedades</h2>
+            <p>Componentes são os blocos de construção do seu jogo. Cada componente possui propriedades que podem ser ajustadas para alterar sua aparência e comportamento.</p>
+            <div class="note">
+                <p><strong>Nota:</strong> Experimente mudar as propriedades dos componentes para ver como afetam o jogo.</p>
+            </div>
+        </section>
+
+        <section id="scripts">
+            <h2>Scripts e Programação em Lua</h2>
+            <p>Scripts permitem que você adicione lógica ao seu jogo. O Roblox Studio usa a linguagem Lua para scripts. Vamos ver um exemplo básico:</p>
+            <pre>
+local part = script.Parent
+part.Touched:Connect(function(hit)
+    print("Parte tocada por " .. hit.Name)
+end)
+            </pre>
+        </section>
+
+        <section id="movimentacao">
+            <h2>Movimentação de Personagens</h2>
+            <p>Você pode controlar a movimentação dos personagens no Roblox Studio através de scripts. Aqui está um exemplo básico de como fazer isso:</p>
+            <pre>
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+character.Humanoid.MoveTo(Vector3.new(0, 0, 0))
+            </pre>
+        </section>
+
+        <section id="guis">
+            <h2>Criação de Interfaces Gráficas (GUIs)</h2>
+            <p>As GUIs permitem que você adicione elementos de interface ao seu jogo, como botões e menus. Veja como criar um botão simples:</p>
+            <pre>
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(0, 200, 0, 50)
+button.Position = UDim2.new(0.5, -100, 0.5, -25)
+button.Text = "Clique Aqui"
+button.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+button.MouseButton1Click:Connect(function()
+    print("Botão clicado!")
+end)
+            </pre>
+            <p>Esse script cria um botão centralizado na tela. Quando clicado, ele imprime uma mensagem no console.</p>
+        </section>
+
+        <section id="efeitos">
+            <h2>Sons e Efeitos Visuais</h2>
+            <p>Adicionar sons e efeitos visuais pode tornar seu jogo mais dinâmico e envolvente. Aqui está como adicionar um som:</p>
+            <pre>
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://1234567"  -- Substitua pelo ID do som desejado
+sound.Parent = workspace
+sound:Play()
+            </pre>
+            <p>O exemplo acima adiciona um som ao workspace e o reproduz automaticamente.</p>
+        </section>
+
+        <section id="publicacao">
+            <h2>Publicando e Compartilhando seu Jogo</h2>
+            <p>Depois de finalizar seu jogo, você pode publicá-lo para que outros jogadores no Roblox possam jogá-lo. Siga os passos abaixo:</p>
+            <ol>
+                <li>Salve seu jogo no Roblox Studio.</li>
+                <li>Vá ao menu "File" e selecione "Publish to Roblox As...".</li>
+                <li>Escolha um nome, descrição e configurações de privacidade para seu jogo.</li>
+                <li>Clique em "Create" para publicar seu jogo.</li>
+            </ol>
+            <p>Seu jogo agora estará disponível na plataforma Roblox!</p>
+        </section>
+
+        <section id="dicas">
+            <h2>Dicas Avançadas</h2>
+            <p>Aqui estão algumas dicas avançadas para levar seus jogos a um novo nível:</p>
+            <ul>
+                <li><strong>Use módulos de script:</strong> Divida seu código em módulos para facilitar a manutenção e reutilização.</li>
+                <li><strong>Otimize o desempenho:</strong> Evite sobrecarregar seu jogo com muitos objetos e scripts desnecessários.</li>
+                <li><strong>Aprenda sobre física:</strong> Use as propriedades físicas dos objetos para criar interações realistas.</li>
+            </ul>
+        </section>
+
+        <section id="exercicios">
+            <h2>Exercícios Interativos</h2>
+            <p>Pratique seus conhecimentos com os exercícios interativos abaixo. Insira um valor e veja o código Lua correspondente:</p>
+            <div class="interactive">
+                <label for="userInput">Digite um valor:</label>
+                <input type="text" id="userInput" placeholder="Ex: Parte1" required>
+                <button onclick="showLuaResult()">Mostrar Lua</button>
+                <p id="resultLua"></p>
+            </div>
+        </section>
+
+        <section id="recursos">
+            <h2>Recursos e Links Úteis</h2>
+            <p>Aqui estão alguns links para aprofundar seus conhecimentos no Roblox Studio:</p>
+            <ul>
+                <li><a href="https://developer.roblox.com/" target="_blank" rel="noopener noreferrer">Documentação Oficial do Roblox</a></li>
+                <li><a href="https://www.youtube.com/user/Roblox" target="_blank" rel="noopener noreferrer">Canal Oficial do Roblox no YouTube</a></li>
+                <li><a href="https://devforum.roblox.com/" target="_blank" rel="noopener noreferrer">Fórum de Desenvolvedores Roblox</a></li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Se você tiver alguma dúvida ou sugestão, entre em contato conosco:</p>
+            <form action="mailto:seu-email@dominio.com" method="post" enctype="text/plain">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Guia Completo de Roblox Studio - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function showLuaResult() {
+            var input = document.getElementById("userInput").value.trim();
+            if (input) {
+                var result = "local part = game.Workspace:FindFirstChild('" + input + "')";
+                document.getElementById("resultLua").innerText = result;
+                document.getElementById("resultLua").style.display = "block";
+            } else {
+                document.getElementById("resultLua").innerText = "Por favor, insira um valor.";
+                document.getElementById("resultLua").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
